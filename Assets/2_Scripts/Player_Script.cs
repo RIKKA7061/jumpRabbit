@@ -38,15 +38,22 @@ public class Player_Script : MonoBehaviour
 		}
 	}
 
-	// 콜라이더 충돌 감지시 (바닥과 충돌 되었을시)
+	// 콜라이더 충돌 감지 (토끼가 플랫폼에 착지) (플레이어가 착지 할 때)
 	private void OnCollisionEnter2D(Collision2D _col)
 	{
-		// 속도 0
+		// 속도 0 (정지)
 		this.rigid.velocity = Vector2.zero;
 
-		// idle로 전환
+		// jump -> idle
 		this.anim.SetInteger("StateID", 0);
 
+		// 플레이어 이동 -> 카메라 이동
 		CameraSystem_Manager.Instance.OnFollowFunc(this.transform.position);
+
+		// 플랫폼 한테 착지 됬다는 사실 전달
+		if(_col.transform.parent.TryGetComponent(out Platform_Script _platformClass) == true)
+		{
+			_platformClass.OnLandding_Func();
+		}
 	}
 }
