@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d16191401daa4b4e8a9f0ffda8fe974, type: 3}
+  m_Name: DataBase_Manager
+  m_EditorClassIdentifier: 
+  jumpPower: 15
+  largePlatformClassArr:
+  - {fileID: 5868598522269301262, guid: f84e57d3e1742a94d9ecc07011abb161, type: 3}
+  - {fileID: 5868598522269301262, guid: b52f44c0912c1824d976caec418a6341, type: 3}
+  - {fileID: 5868598522269301262, guid: d92a1bd334864e14ca6a16211ea49597, type: 3}
+  middlePlatformClassArr:
+  - {fileID: 1169343565519652898, guid: 2f4717aade86dd044b1b4e13e45f356c, type: 3}
+  - {fileID: 1169343565519652898, guid: b5abde1d53c6efa48835950f96e4f967, type: 3}
+  - {fileID: 1169343565519652898, guid: ba6fd1bede80b1b45a73d44860705371, type: 3}
+  smallPlatformClassArr:
+  - {fileID: 2529882265238208735, guid: 21aa361b8fca0fd47aa578c2dd4541c5, type: 3}
+  - {fileID: 2529882265238208735, guid: 0ff2b43f1b6be3449b712d632b596ea6, type: 3}
+  - {fileID: 2529882265238208735, guid: 12ef15a17e7fd6440a0ed467461cbd98, type: 3}
+  - {fileID: 2529882265238208735, guid: 0fb42dfc83cac0b4580318f4e4199243, type: 3}
+  dataArr:
+  - conditionNum: 40
+    percentArr:
+    - 0.6
+    - 0.2
+    - 0.2
+  - conditionNum: 30
+    percentArr:
+    - 0.3
+    - 0.4
+    - 0.3
+  - conditionNum: 20
+    percentArr:
+    - 0.1
+    - 0.4
+    - 0.5
+  - conditionNum: 10
+    percentArr:
+    - 0
+    - 0.25
+    - 0.75
+  - conditionNum: 0
+    percentArr:
+    - 0
+    - 0
+    - 1
+  gapIntervalMin: 1
+  gapIntervalMax: 2
+  followSpeed: 5
+  arriveDist: 0.1

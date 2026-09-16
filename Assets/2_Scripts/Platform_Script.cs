@@ -1,0 +1,16 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Platform_Script : MonoBehaviour
+{
+    [SerializeField] private BoxCollider2D col = null;
+    [SerializeField] private SpriteRenderer srdr = null;
+
+    public float GetHalfSizeX => this.col.size.x * .5f;
+
+    public void Active_Func(Vector2 _pos)
+	{
+        this.transform.position = _pos;
+	}
+}
