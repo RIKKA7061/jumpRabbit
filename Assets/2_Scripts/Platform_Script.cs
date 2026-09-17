@@ -18,6 +18,6 @@ public class Platform_Script : MonoBehaviour
     // 플레이어 착지 감지 -> 착지 사실 전달 -> *이 함수 -> 점수 매니저 -> 점수 추가
     public void OnLandding_Func()
     {
-        ScoreSystem_Manager.Instance.AddScore_Func(this.score);
+        ScoreSystem_Manager.Instance.AddScore_Func(this.score, this.transform.position);
     }
 }
